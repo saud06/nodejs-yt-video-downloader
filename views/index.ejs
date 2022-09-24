@@ -1,0 +1,350 @@
+<%- include('header'); %>
+
+<HTML>
+  <body>
+    <header class="header fixed-top">
+      <div class="branding docs-branding">
+        <div class="container-fluid position-relative py-2">
+          <div class="docs-logo-wrapper">
+            <div class="site-logo">
+              <a class="navbar-brand" href="./"
+                ><img class="logo-icon mr-2" src="images/logoh52.png" alt="logo"
+              /></a>
+            </div>
+          </div>
+          <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+            <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-github fa-fw"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-twitter fa-fw"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-slack fa-fw"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fab fa-product-hunt fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+        </div>
+        <!--//container-->
+      </div>
+      <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="page-header theme-bg-dark py-5 text-center position-relative">
+      <div class="theme-bg-shapes-right"></div>
+      <div class="theme-bg-shapes-left"></div>
+      <div class="container">
+        <h1 class="page-heading single-col-max mx-auto">YouTube Video DOwnloader</h1>
+        <div class="page-intro single-col-max mx-auto">Download Free Youtube Videos And Audio.</div>
+        <div class="main-search-box pt-3 d-block mx-auto">
+          <div class="search-form w-100">
+            <input
+              type="text"
+              placeholder="Enter the Youtube video link..."
+              name="search"
+              class="form-control search-input download-input"
+            />
+            <div class="pt-3 text-center">
+              <a class="btn btn-light" href="#" id="download-button"
+                >Download<i class="fas fa-arrow-alt-circle-down ml-2"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div class="text-danger error-text">
+          <h5>Please enter valid URl!</h5>
+        </div>
+      </div>
+    </div>
+    <!--//page-header-->
+
+    <section id="video-download">
+      <!-- Loader Icon -->
+      <div class="container loader-icon-view">
+        <div class="row">
+          <div class="loader-icon">
+            <div class="lds-cube">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <h4>Loading...</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="container download-view">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="content-video" style="margin-bottom: 15px">
+              <div class="row">
+                <div class="video-thumb col-sm-4">
+                  <img class="thumb-img" src="" />
+                </div>
+
+                <div class="video-desc col-sm-8">
+                  <h5 class="title"></h5>
+                  <small class="text-muted duration"></small>
+                </div>
+              </div>
+              <hr />
+            </div>
+
+            <div class="content-group">
+              <h4 class="text-center"><strong>Download Video With Audio</strong></h4>
+
+              <table class="table text-center borderless">
+                <thead>
+                  <tr class="table-light">
+                    <th scope="col">Quality</th>
+                    <th scope="col">Format</th>
+                    <th scope="col">Download</th>
+                  </tr>
+                </thead>
+                <tbody class="videoAudioLink"></tbody>
+              </table>
+            </div>
+
+            <div class="text-center" style="margin: 20px">
+              <div class="banner-ads">
+                <!-- Replace your Ad Code here -->
+                <img src="images/banner.png" />
+                <!-- End Ad Code -->
+              </div>
+            </div>
+
+            <div class="content-group">
+              <h4 class="text-center"><strong>Download Video Only</strong></h4>
+              <table class="table text-center borderless">
+                <thead>
+                  <tr class="table-light">
+                    <th scope="col">Quality</th>
+                    <th scope="col">Format</th>
+                    <th scope="col">Download</th>
+                  </tr>
+                </thead>
+                <tbody class="videoLink"></tbody>
+              </table>
+            </div>
+
+            <div class="text-center" style="margin: 20px">
+              <div class="banner-ads">
+                <!-- Replace your Ad Code here -->
+                <img src="images/banner.png" />
+                <!-- End Ad Code -->
+              </div>
+            </div>
+
+            <div class="content-group">
+              <h4 class="text-center"><strong>Download Audio Only</strong></h4>
+              <table class="table text-center borderless">
+                <thead>
+                  <tr class="table-light">
+                    <th scope="col">Quality</th>
+                    <th scope="col">Format</th>
+                    <th scope="col">Download</th>
+                  </tr>
+                </thead>
+                <tbody class="audioLink"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-content">
+      <div class="container">
+        <div class="docs-overview py-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="theme-icon-holder card-icon-holder mr-2">
+                      <i class="fas fa-map-signs"></i> </span
+                    ><!--//card-icon-holder-->
+                    <span class="card-title-text">Introduction</span>
+                  </h5>
+                  <div class="card-text">
+                    Section overview goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor.
+                  </div>
+                  <a class="card-link-mask" href="#"></a>
+                </div>
+                <!--//card-body-->
+              </div>
+              <!--//card-->
+            </div>
+            <!--//col-->
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="theme-icon-holder card-icon-holder mr-2">
+                      <i class="fas fa-arrow-down"></i> </span
+                    ><!--//card-icon-holder-->
+                    <span class="card-title-text">Installation</span>
+                  </h5>
+                  <div class="card-text">
+                    Section overview goes here. Donec pede justo, fringilla vel, aliquet nec,
+                    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                    justo.
+                  </div>
+                  <a class="card-link-mask" href="#"></a>
+                </div>
+                <!--//card-body-->
+              </div>
+              <!--//card-->
+            </div>
+            <!--//col-->
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="theme-icon-holder card-icon-holder mr-2">
+                      <i class="fas fa-box fa-fw"></i> </span
+                    ><!--//card-icon-holder-->
+                    <span class="card-title-text">APIs</span>
+                  </h5>
+                  <div class="card-text">
+                    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis,
+                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque
+                    rutrum. Aenean imperdiet.
+                  </div>
+                  <a class="card-link-mask" href="#"></a>
+                </div>
+                <!--//card-body-->
+              </div>
+              <!--//card-->
+            </div>
+            <!--//col-->
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="theme-icon-holder card-icon-holder mr-2">
+                      <i class="fas fa-cogs fa-fw"></i> </span
+                    ><!--//card-icon-holder-->
+                    <span class="card-title-text">Integrations</span>
+                  </h5>
+                  <div class="card-text">
+                    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis,
+                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque
+                    rutrum. Aenean imperdiet.
+                  </div>
+                  <a class="card-link-mask" href="#"></a>
+                </div>
+                <!--//card-body-->
+              </div>
+              <!--//card-->
+            </div>
+            <!--//col-->
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="theme-icon-holder card-icon-holder mr-2">
+                      <i class="fas fa-tools"></i> </span
+                    ><!--//card-icon-holder-->
+                    <span class="card-title-text">Utilities</span>
+                  </h5>
+                  <div class="card-text">
+                    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis,
+                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque
+                    rutrum. Aenean imperdiet.
+                  </div>
+                  <a class="card-link-mask" href="#"></a>
+                </div>
+                <!--//card-body-->
+              </div>
+              <!--//card-->
+            </div>
+            <!--//col-->
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">
+                    <span class="theme-icon-holder card-icon-holder mr-2">
+                      <i class="fas fa-laptop-code"></i> </span
+                    ><!--//card-icon-holder-->
+                    <span class="card-title-text">Web</span>
+                  </h5>
+                  <div class="card-text">
+                    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis,
+                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque
+                    rutrum. Aenean imperdiet.
+                  </div>
+                  <a class="card-link-mask" href="#"></a>
+                </div>
+                <!--//card-body-->
+              </div>
+              <!--//card-->
+            </div>
+            <!--//col-->
+          </div>
+          <!--//row-->
+        </div>
+        <!--//container-->
+      </div>
+      <!--//container-->
+    </div>
+    <!--//page-content-->
+
+    <section class="cta-section text-center py-5 theme-bg-dark position-relative">
+      <div class="theme-bg-shapes-right"></div>
+      <div class="theme-bg-shapes-left"></div>
+      <div class="container">
+        <h3 class="mb-2 text-white mb-3">Free Download Videos Like A Pro</h3>
+        <div class="section-intro text-white mb-3 single-col-max mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem
+          dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et
+          repudiandae ipsa exercitationem, in, quo totam.
+        </div>
+      </div>
+    </section>
+    <!--//cta-section-->
+
+    <footer class="footer">
+      <div class="footer-bottom text-center py-5">
+        <ul class="social-list list-unstyled pb-4 mb-0">
+          <li class="list-inline-item">
+            <a href="#"><i class="fab fa-github fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="fab fa-twitter fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="fab fa-slack fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="fab fa-product-hunt fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="fab fa-facebook-f fa-fw"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="fab fa-instagram fa-fw"></i></a>
+          </li>
+        </ul>
+        <!--//social-list-->
+      </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="/javascripts/script.js"></script>
+  </body>
+</HTML>

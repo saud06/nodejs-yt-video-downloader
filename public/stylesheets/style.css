@@ -1,0 +1,83 @@
+/*
+ * Title: Youtube Video Downloader
+ * Description: A simple Node JS library to download videos from YouTube
+ * Author: Saud M.
+ * GitHub: https://github.com/saud06
+ * LinkedIn: https://www.linkedin.com/in/saud06
+ */
+
+section {
+  padding: 80px 0;
+}
+
+.borderless td,
+.borderless th {
+  border: none;
+}
+
+.content-group {
+  margin-top: 22px;
+}
+
+.video-thumb {
+  padding: 5px;
+}
+
+.video-desc {
+  padding-left: 40px;
+  padding-top: 15px;
+}
+
+@media (max-width: 575.98px) {
+  .content-video {
+    text-align: center;
+  }
+}
+
+.loader-icon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.lds-cube {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 74px;
+}
+.lds-cube div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #2e2e2e;
+  animation: lds-cube 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-cube div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.36s;
+}
+.lds-cube div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.24s;
+}
+.lds-cube div:nth-child(3) {
+  left: 45px;
+  animation-delay: -0.12s;
+}
+.lds-cube div:nth-child(4) {
+  left: 64px;
+  animation-delay: 0;
+}
+@keyframes lds-cube {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+  50%,
+  100% {
+    top: 19px;
+    height: 26px;
+  }
+}
